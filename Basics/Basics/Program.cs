@@ -353,8 +353,103 @@ namespace Basics
             // for loops \\
 
 
+            // for loop = repeats some code a FINITE amount of times
+            /*
+            for (int i = 1; i <= 10; i++) // i+=1 je isto kao i i++
+            {
+                Console.WriteLine(i);
+            }
+            */
+
+            //            for (int i = 10; i > 0; i--)
+            //            {
+            //                Console.WriteLine(i);
+            //            }
+            //            Console.WriteLine("HAPPY NEW YEAR!");
 
 
+            // nested loops \\
+
+            // nested loops = loop inside of other loops
+            //                Uses vary. Used a lot in sorting algorithms
+
+
+            // Sorting algorithms --> koristi se kako bi rearrange-ali neki array npr iz ( 2, 7, 4, 1, 9, 5 ) u ( 1, 2, 4, 5, 7, 9 )
+
+            //            Console.Write("How many rows?: ");
+            //            int rows = Convert.ToInt32 (Console.ReadLine());
+            //
+            //            Console.Write("How many columns?: ");
+            //            int columns = Convert.ToInt32(Console.ReadLine());
+            //
+            //
+            //            Console.Write("What symbol: ");
+            //            String symbol = Console.ReadLine();
+            //
+            //            for (int i = 0; i < rows; i++) // outer loop in charge of the rows
+            //            {
+            //                for (int j = 0; j < columns; j++) // inner loop in charge of the columns
+            //                {
+            //                    Console.Write(symbol);
+            //                }
+            //                Console.WriteLine();
+            //            }
+
+
+            // number guessing game \\
+
+            Random random = new Random();
+
+            bool playAgain = true;
+            int min = 1;
+            int max = 100;
+            int guess;
+            int number;
+            int guesses;
+            string response;
+
+            while (playAgain)
+            {
+                guess = 0;
+                guesses = 0;
+                response = "";
+                number = random.Next(min, max + 1); // max + 1 = 101 ali će generirati random broj od 1 do 100 ( neće generairti 101 )
+
+                while (guess != number)
+                {
+                    Console.WriteLine("Guess a number between " + min + " - " + max + " : ");
+                    guess = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Guess: " + guess);
+
+                    if (guess > number)
+                    {
+                        Console.WriteLine(guess + " is to high!");
+                    }
+                    else if (guess < number)
+                    {
+                        Console.WriteLine(guess + " is to low!");
+                    }
+                    guesses++;
+                }
+                Console.WriteLine("Number: " + number);
+                Console.WriteLine("YOU WIN!");
+                Console.WriteLine("Guesses: " + guesses);
+
+                Console.WriteLine("Would you like to play again (Y/N): ");
+                response = Console.ReadLine();
+                response = response.ToUpper();
+
+                if (response == "Y")
+                {
+                    playAgain = true;
+                }
+                else // problem sa ovim dijelom koda što ako napišem bilo šta umjeso Y onda će playAgain biti false ( ne moram napisati N)
+                {
+                    playAgain = false;
+                }
+            }
+
+            Console.WriteLine("Thanks for playing! ... I guess");
 
 
 
