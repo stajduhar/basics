@@ -3,7 +3,7 @@
 namespace Basics
 {
     class testing_escape_sequence
-        { 
+        {
         static void Main(string[] args)
         {
             //            Console.WriteLine("Hey!");
@@ -398,61 +398,291 @@ namespace Basics
 
             // number guessing game \\
 
-            Random random = new Random();
+            //            Random random = new Random();
+            //
+            //            bool playAgain = true;
+            //            int min = 1;
+            //            int max = 100;
+            //            int guess;
+            //            int number;
+            //            int guesses;
+            //            string response;
+            //
+            //            while (playAgain)
+            //            {
+            //                guess = 0;
+            //                guesses = 0;
+            //                response = "";
+            //                number = random.Next(min, max + 1); // max + 1 = 101 ali će generirati random broj od 1 do 100 ( neće generairti 101 )
+            //
+            //                while (guess != number)
+            //                {
+            //                    Console.WriteLine("Guess a number between " + min + " - " + max + " : ");
+            //                    guess = Convert.ToInt32(Console.ReadLine());
+            //                    Console.WriteLine("Guess: " + guess);
+            //
+            //                    if (guess > number)
+            //                    {
+            //                        Console.WriteLine(guess + " is to high!");
+            //                    }
+            //                    else if (guess < number)
+            //                    {
+            //                        Console.WriteLine(guess + " is to low!");
+            //                    }
+            //                    guesses++;
+            //                }
+            //                Console.WriteLine("Number: " + number);
+            //                Console.WriteLine("YOU WIN!");
+            //                Console.WriteLine("Guesses: " + guesses);
+            //
+            //                Console.WriteLine("Would you like to play again (Y/N): ");
+            //                response = Console.ReadLine();
+            //                response = response.ToUpper();
+            //
+            //                if (response == "Y")
+            //                {
+            //                    playAgain = true;
+            //                }
+            //                else // problem sa ovim dijelom koda što ako napišem bilo šta umjeso Y onda će playAgain biti false ( ne moram napisati N)
+            //                {
+            //                    playAgain = false;
+            //                }
+            //            }
+            //
+            //            Console.WriteLine("Thanks for playing! ... I guess");
+            //
 
-            bool playAgain = true;
-            int min = 1;
-            int max = 100;
-            int guess;
-            int number;
-            int guesses;
-            string response;
 
-            while (playAgain)
-            {
-                guess = 0;
-                guesses = 0;
-                response = "";
-                number = random.Next(min, max + 1); // max + 1 = 101 ali će generirati random broj od 1 do 100 ( neće generairti 101 )
+            // rock-paper-scissors game \\
 
-                while (guess != number)
-                {
-                    Console.WriteLine("Guess a number between " + min + " - " + max + " : ");
-                    guess = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine("Guess: " + guess);
 
-                    if (guess > number)
-                    {
-                        Console.WriteLine(guess + " is to high!");
-                    }
-                    else if (guess < number)
-                    {
-                        Console.WriteLine(guess + " is to low!");
-                    }
-                    guesses++;
-                }
-                Console.WriteLine("Number: " + number);
-                Console.WriteLine("YOU WIN!");
-                Console.WriteLine("Guesses: " + guesses);
+            //            Random random = new Random();
+            //            bool playAgain = true;
+            //            String player;
+            //            String computer;
+            //            String answer;
+            //
+            //
+            //            while (playAgain)
+            //            {
+            //                player = "";
+            //                computer = "";
+            //                answer = "";
+            //
+            //                while (player != "ROCK" && player != "PAPER" && player != "SCISSORS")
+            //                {
+            //                    Console.WriteLine("Enter ROCK, PAPER or SCISSORS: ");
+            //                    player = Console.ReadLine();
+            //                    player = player.ToUpper();
+            //                }
+            //
+            //                switch (random.Next(1, 4))
+            //                {
+            //                    case 1:
+            //                        computer = "ROCK";
+            //                        break;
+            //                    case 2:
+            //                        computer = "PAPER";
+            //                        break;
+            //                    case 3:
+            //                        computer = "SCISSORS";
+            //                        break;
+            //                }
+            //
+            //                Console.WriteLine("Player" + player);
+            //                Console.WriteLine("Computer" + computer);
+            //
+            //                switch (player)
+            //                {
+            //                    case "ROCK":
+            //                        if (computer == "ROCK")
+            //                        {
+            //                            Console.WriteLine("It's a draw");
+            //                        }
+            //                        else if (computer == "PAPER")
+            //                        {
+            //                            Console.WriteLine("You lose!");
+            //                        }
+            //                        else
+            //                        {
+            //                            Console.WriteLine("You win!");
+            //                        }
+            //                        break;
+            //                    case "PAPER":
+            //                        if (computer == "ROCK")
+            //                        {
+            //                            Console.WriteLine("You win!");
+            //                        }
+            //                        else if (computer == "PAPER")
+            //                        {
+            //                            Console.WriteLine("It's a draw!");
+            //                        }
+            //                        else
+            //                        {
+            //                            Console.WriteLine("You lose!");
+            //                        }
+            //                        break;
+            //                    case "SCISSORS":
+            //                        if (computer == "ROCK")
+            //                        {
+            //                            Console.WriteLine("You lose!");
+            //                        }
+            //                        else if (computer == "PAPER")
+            //                        {
+            //                            Console.WriteLine("You win!");
+            //                        }
+            //                        else
+            //                        {
+            //                            Console.WriteLine("Its a draw!");
+            //                        }
+            //                        break;
+            //                }
+            //                Console.WriteLine("Would you like to play again (Y/N): ");
+            //                answer = Console.ReadLine();
+            //                answer = answer.ToUpper();
+            //
+            //                if (answer == "Y")
+            //                {
+            //                    playAgain = true;
+            //                }
+            //                else
+            //                {
+            //                    playAgain = false; // problem sa ovim kodom --> ako napišem bilo šta osim Y varijabla playAgain će biti false
+            //                }
+            //            }
+            //            Console.WriteLine("Thanks for playing!");
 
-                Console.WriteLine("Would you like to play again (Y/N): ");
-                response = Console.ReadLine();
-                response = response.ToUpper();
 
-                if (response == "Y")
-                {
-                    playAgain = true;
-                }
-                else // problem sa ovim dijelom koda što ako napišem bilo šta umjeso Y onda će playAgain biti false ( ne moram napisati N)
-                {
-                    playAgain = false;
-                }
-            }
+            // calculator program \\
 
-            Console.WriteLine("Thanks for playing! ... I guess");
+
+            //            do
+            //            {
+            //                double num1 = 0;
+            //                double num2 = 0;
+            //                double result = 0;
+            //
+            //                Console.WriteLine("------------------");
+            //                Console.WriteLine("Calculator Program");
+            //                Console.WriteLine("------------------");
+            //
+            //                Console.Write("Enter number 1: ");
+            //                num1 = Convert.ToDouble(Console.ReadLine()); // users input is allways a string thats why we have to convert to double
+            //
+            //                Console.Write("Enter number 2: ");
+            //                num2 = Convert.ToDouble(Console.ReadLine());
+            //
+            //                Console.WriteLine("Enter an option: ");
+            //                Console.WriteLine("\t+ : Add");
+            //                Console.WriteLine("\t- : Subtract");
+            //                Console.WriteLine("\t* : Multiply");
+            //                Console.WriteLine("\t/ : Divide");
+            //
+            //                Console.Write("Enter an option: ");
+            //
+            //
+            //                switch (Console.ReadLine())
+            //                {
+            //                    case "+":
+            //                        result = num1 + num2;
+            //                        Console.WriteLine($"Your result: {num1} + {num2} = " + result);
+            //                        break;
+            //                    case "-":
+            //                        result = num1 - num2;
+            //                        Console.WriteLine($"Your result: {num1} - {num2} = " + result);
+            //                        break;
+            //                    case "*":
+            //                        result = num1 * num2;
+            //                        Console.WriteLine($"Your result: {num1} * {num2} = " + result);
+            //                        break;
+            //                    case "/":
+            //                        result = num1 / num2;
+            //                        Console.WriteLine($"Your result: {num1} / {num2} = " + result);
+            //                        break;
+            //                    default:
+            //                        Console.WriteLine("That was not a valid option");
+            //                        break;
+            //                }
+            //                Console.WriteLine("Would you like to continue? (Y = Yes, N = No): ");
+            //            } while (Console.ReadLine().ToUpper() == "Y"); // problem sa ovim kodom --> ako napišem bilo šta osim Y varijabla program će se opet izvršavati ne moram napisati isključivo N
+            //
+            //            Console.WriteLine("Bye!");
+
+
+            // arrays \\
+
+            // Arrays have fixed size
+
+            //            String[] cars = new string[4]; 
+            //
+            //            // string[] cars = { "BMW", "Mustang", "Corvette"};
+            //
+            //            cars[0] = "Tesla";
+            //            cars[1] = "Mustang";
+            //            cars[2] = "Corvette";
+            //
+            //            for (int i = 0; i < cars.Length; i++) // ovaj if statement je napisan kako se nebi pisao Console.WriteLine 3 puta
+            //            {
+            //                Console.WriteLine(cars[i]);
+            //            }
+
+            // foreach loop \\
+
+            //            String[] cars = { "BMW", "Mustang", "Corvette" };
+            //
+            //
+            //            foreach(String car in cars)
+            //                {
+            //                Console.WriteLine(car);
+            //            }
+
+
+            // methods \\
+
+            //          String name = "Test";
+            //          int age = 21;
+            //
+            //          singHappyBirthday(name, age); //  !!KADA POVEZUJEMO!!
+            //
+            //
+            //        }
+            //        static void singHappyBirthday(String ime, int godine) // !!KADA POVEZUJEMO!! bitna je data type i poredak, ali se varijable ne moraju zvati isto
+            //        {
+            //            Console.WriteLine("Happy birthday to you!");
+            //            Console.WriteLine("Happy birthday to you!");
+            //            Console.WriteLine("Happy birthday dear " + ime);
+            //            Console.WriteLine("You are " + godine + " Years old!");
+            //            Console.WriteLine("Happy birthday to you!");
+            //            Console.WriteLine();
+
+
+            // return keyword \\
+
+            //            double x;
+            //            double y;
+            //            double result;
+            //
+            //            Console.WriteLine("Enter in number 1: ");
+            //            x = Convert.ToDouble(Console.ReadLine());
+            //
+            //            Console.WriteLine("Enter in number 2: ");
+            //            y = Convert.ToDouble(Console.ReadLine());
+            //
+            //            result = Multiply(x, y);
+            //
+            //            Console.WriteLine(result);
+            //
+            //          }
+            //        static double Multiply(double x, double y)
+            //        {
+            //            return x * y;
+            //        }
+
+            // method overloading \\
 
 
 
         }
+
     }
 }
