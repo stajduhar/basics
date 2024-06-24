@@ -1,10 +1,13 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.Design;
+using System.Drawing;
+using System.Reflection;
 
 namespace Basics
 {
     class testing_escape_sequence
-        {
+    {
         static void Main(string[] args)
         {
             //            Console.WriteLine("Hey!");
@@ -837,6 +840,77 @@ namespace Basics
 
 
             // classes \\
+
+            // class = A bundle of relted code.
+            //         Can be used as a blueprint to create objects (OOP)
+
+            //            Math.Round(3.14);
+            //            Math.Abs(-3.14);
+            //            Math.Pow(2, 3); // pre definirana class-a
+            //
+            //            Messages.Hello(); // mi smo definirali ovu class-u
+            //            Messages.Waiting();
+            //            Messages.Bye();
+
+
+
+            // object \\
+
+            // object = An instance of a class
+            //          A class can be used as a blueprint to create objects (OOP)
+            //          objects can have fields & methods (characteristics & actions)
+            //          fields ( what an objects have ), methods ( what an object can do )
+
+
+            // constructors \\
+
+            // constructor = A special method in a class
+            //               Same name as the class name
+            //               Can be used to assign arguments to fields when creating an object
+
+
+            //           Car car1 = new Car("Ford", "Mustang", 2022, "red"); // kreirana je Car.cs klasa izvan Program.cs
+            //           Car car2 = new Car("Chevy", "Corvette", 2021, "blue");
+            //
+            //           car1.Drive(); // Drive je invoakain iz Car.cs
+            //           car2.Drive(); // Drive je invoakain iz Car.cs
+            //
+            //           Human human1 = new Human("test", 43);
+            //           Human human2 = new Human("toast", 25);
+            //
+            //
+            //           human1.Eat();
+            //           human1.Sleep();
+            //
+            //           human2.Eat();
+            //           human2.Sleep();
+            //
+            //
+            //       }
+            //   }
+            //
+            //   class Human
+            //   {
+            //       public string name; // field
+            //       public int age;     // field
+            //
+            //       public Human(string name, int age)  // constructor
+            //        {
+            //           this.name = name; // prvi name je filed name --> .name // drugi name je ime parametra iz constructora --> name (string name)
+            //           this.age = age;
+            //        }
+            //
+            //       public void Eat() // method
+            //       {
+            //           Console.WriteLine(name + " is eating");
+            //       }
+            //
+            //       public void Sleep() // method
+            //       {
+            //           Console.WriteLine(name + " is sleeping");
+            //       }
+
+
 
 
 
