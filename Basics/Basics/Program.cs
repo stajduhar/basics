@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.Design;
 
 namespace Basics
 {
@@ -680,9 +681,165 @@ namespace Basics
 
             // method overloading \\
 
+            // name + parametas = signature
+
+            //            double total;
+            //
+            //            total = Multiply(2.421, 3);
+            //
+            //            Console.WriteLine(total);
+            //
+            //
+            //
+            //
+            //        }
+            //
+            //        static double Multiply(double a, double b)
+            //        {
+            //            return a * b; 
+            //        }
+            //        static double Multiply(double a, double b, double c)
+            //        {
+            //            return a * b * c;
+            //        }
+            //
+            //        static double Multiply(int a, double b)
+            //        {
+            //            return a - b;
+            //        }
+
+            // params keyword \\
+
+            //    // umjesto da koristimo method overloading sa jako puno metoda, možemo koristiti params keyword ( mora biti single dimensional array )
+
+
+            //            double total = CheckOut(3.99, 5.75, 15, 1.00, 10.25);
+            //
+            //            Console.WriteLine(total);
+            //
+            //        }
+            //
+            //        static double CheckOut(params double[] prices)
+            //        {
+            //
+            //            double total = 0;
+            //
+            //            foreach (double price in prices)
+            //            {
+            //
+            //                total += price;
+            //
+            //            }
+            //
+            //            return total;
+
+
+            // exception handling \\
+
+            //            double x;
+            //            double y;
+            //            double result;
+            //
+            //            // try = stavlja se oko koda za kojeg mislimo da bi mogao puknuti
+            //            // catch = uhvati exception i handle-a ga
+            //            // finally = uvijek se executa ne vezano jel se javio exception ili nije
+            //
+            //
+            //            try
+            //            {
+            //                Console.WriteLine("Enter number 1: ");
+            //                x = Convert.ToInt32(Console.ReadLine());
+            //
+            //                Console.WriteLine("Enter number 2: ");
+            //                y = Convert.ToInt32(Console.ReadLine());
+            //
+            //                result = x / y;
+            //
+            //                Console.WriteLine("result: " + result);
+            //            }
+            //            catch (FormatException e)
+            //            {
+            //                Console.WriteLine("Enter ONLY numbers PLEASE!");
+            //            }
+            //            catch (DivideByZeroException e)
+            //            {
+            //                Console.WriteLine("You can't divide by zero!");
+            //            }
+            //            catch (Exception e)
+            //            {
+            //                Console.WriteLine("Something went wrong!");
+            //            }
+            //            finally
+            //            {
+            //                Console.WriteLine("Thanks for visiting!");
+            //            }
+
+
+
+
+            // conditional operator \\
+
+            //            // conditinal operator = učini nešto u slučaju da je condition true, uprotivnom učini ovo drugo
+            //
+            //            // (condition) ? x : y
+            //
+            //
+            //            double temperature = 20;
+            //            String message;
+            //
+            //            message = (temperature >= 15) ? "It's warm outside!" : "It's cold outside!";
+            //
+            //            Console.WriteLine(message);
+
+
+
+
+            // string interpolation \\
+
+            //            // dodaje varijable u string, potrebno je dodati $ prije znaka ", varijabla se upisuje u {}
+            //
+            //            string firstName = "test";
+            //            string lastName = "toast";
+            //            int age = 25;
+            //
+            //
+            //            Console.WriteLine($"Hello {firstName,10} {lastName}."); // 10 obavlja istu funkciju kao da smo ukucali 10 razmaka sa spaceom prije varijable age
+            //            Console.WriteLine($"You are {age,-10} years old."); // -10 obavlja istu funkciju kao da smo ukucali 10 razmaka sa spaceom nakon varijable age
+
+
+
+            // multidimensional arrays \\
+
+
+            //            string[,] parkingLot = { { "Mustang", "F-150", "Explorer" },
+            //                                     { "Corvette", "Camaro", "Silverado" },
+            //                                     { "Corolla", "Camry", "Rav4" } };
+            //
+            //            parkingLot[0, 2] = "Fusion";
+            //
+            //            parkingLot[2, 0] = "Tacoma";
+            //
+            //            /*
+            //            foreach (string car in parkingLot)
+            //            {
+            //                Console.WriteLine(car);
+            //            }
+            //            */
+
+            //            for (int i = 0; i < parkingLot.GetLength(0); i++) // Get.Length(0)  --> ova 0 predstavlja prvu dimenziju --> npr: kod X Y koordinata 0 predstavlja Y
+            //                {
+            //                for (int j = 0; j < parkingLot.GetLength(1); j++) // Get.Length(1)  --> ova 1 predstavlja drugu dimenziju --> npr: kod X Y koordinata 1 predstavlja X
+            //                {
+            //                    Console.Write(parkingLot[i, j] + " ");
+            //                }
+            //                Console.WriteLine();
+            //            }
+
+
+            // classes \\
+
 
 
         }
-
     }
 }
