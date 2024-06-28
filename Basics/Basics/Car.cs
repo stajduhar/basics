@@ -6,7 +6,7 @@
         string model;
         int year;
         string color;
-        public Car(string make, string model, int year, string color)
+        public Car(string make, string model, int year, string color) // ovo je constructor 
         {
             this.make = make;
             this.model = model;

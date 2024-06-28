@@ -650,7 +650,7 @@ namespace Basics
             //
             //
             //        }
-            //        static void singHappyBirthday(String ime, int godine) // !!KADA POVEZUJEMO!! bitna je data type i poredak, ali se varijable ne moraju zvati isto
+            //        static void singHappyBirthday(String ime, int godine) // !!KADA POVEZUJEMO!! bitan je data type i poredak, ali se varijable ne moraju zvati isto
             //        {
             //            Console.WriteLine("Happy birthday to you!");
             //            Console.WriteLine("Happy birthday to you!");
@@ -895,10 +895,10 @@ namespace Basics
             //       public int age;     // field
             //
             //       public Human(string name, int age)  // constructor
-            //        {
+            //       {
             //           this.name = name; // prvi name je filed name --> .name // drugi name je ime parametra iz constructora --> name (string name)
             //           this.age = age;
-            //        }
+            //       }
             //
             //       public void Eat() // method
             //       {
@@ -911,9 +911,48 @@ namespace Basics
             //       }
 
 
+            //            // Static \\
+            //
+            //            // static = modifier that can be applied to field, method or class it self
+            //            //          anything thats declared static now belongs to the class
+            //            //          and no one object has ownership of it
+            //
+            //            Tar car1 = new Tar("Mustang"); // ne može se kreirati objekt ako je klasa static ( ovo se veže uz Math primjer )
+            //            Tar car2 = new Tar("Corvette");
+            //
+            //            // Console.WriteLine(car1.numberOfCars); // bez static ovo radi i ispisati će 1
+            //            Console.WriteLine(Tar.numberOfCars); // zbog static numberOfCars pripada klasi Tar
+            //
+            //            Tar.StartRace();
+            //
+            //            // Math math1 = new Math(); // ovo se veže na car1 komentar
+            //            // math1.Round();           // Npr nebi smo kreirali objekt math1 da bi smo Roundali broj
+            //                                        // nego direktno pokrenemo round is static klase Math --> Math.Round();
+            //
+            //        } 
+            //    }
+            //
+            //    class Tar // ( static može biti definiran u klasi )
+            //    {
+            //        string model;
+            //        public static int numberOfCars; // ovdje je definiran static ( static može biti definiran u fieldu )
+            //
+            //        public Tar(string model) 
+            //        {
+            //            this.model = model;
+            //            numberOfCars++;
+            //        }
+            //
+            //        public static void StartRace() // ( static može biti definiran u metodi )
+            //        {
+            //            Console.WriteLine("The race has begun!");
+            //        }
 
 
 
         }
     }
 }
+
+
+
