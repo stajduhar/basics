@@ -949,9 +949,128 @@ namespace Basics
             //        }
 
 
+            // Overloaded constructors \\
+
+            // technique to create multiple constructors,
+            // with a different set of parameters.
+            // name + parameters = signature
+
+            // unutar iste klase se ne mogu nalaziti 2 constructora sa istim parametrima iz fielda ( nebitno jel se različito zovu)
+
+
+
+            //            Pizza pizza = new Pizza("stuffed crust", "red sauce", "mozzarella", "pepperoni"); // we need all 4 (bread, sauce, cheese, topping) to construct a pizza object
+            //
+            //
+            //
+            //        }
+            //    }
+            //
+            //    class Pizza
+            //    {
+            //        string bread;
+            //        string sauce;
+            //        string cheese;
+            //        string topping;
+            //
+            //        public Pizza(string bread, string sauce, string cheese, string topping)
+            //        {
+            //            this.bread = bread;
+            //            this.sauce = sauce;
+            //            this.cheese = cheese;
+            //            this.topping = topping;
+            //        }
+            //
+            //        public Pizza(string bread, string sauce, string cheese)
+            //        {
+            //            this.bread = bread;
+            //            this.sauce = sauce;
+            //            this.cheese = cheese;
+            //        }
+            //
+            //        public Pizza(string bread, string sauce)
+            //        {
+            //            this.bread = bread;
+            //            this.sauce = sauce;
+            //        }
+            //
+            //        public Pizza(string bread)
+            //        {
+            //            this.bread = bread;
+            //        }
+
+            // Inheritance \\
+
+            // inheritance = 1 or more child classes reciveing fields, methods, etc. from a common parent
+
+
+
+
+            //            Tar tar = new Tar(); // već postoji klasa Car.cs pa sam ovu klasu nazvao Tar
+            //            Bicycle bicycle = new Bicycle();
+            //            Boat boat = new Boat();
+            //            Coat coat = new Coat();
+            //
+            //            Console.WriteLine(tar.speed);
+            //            Console.WriteLine(tar.wheels);
+            //            tar.go();
+            //
+            //            Console.WriteLine(bicycle.speed);
+            //            Console.WriteLine(bicycle.wheels);
+            //            bicycle.go();
+            //
+            //            Console.WriteLine(boat.speed);
+            //            Console.WriteLine(boat.wheels);
+            //            boat.go();
+            //
+            //            Console.WriteLine(coat.speed);  // Testirano jel može child klasa postati i parent klasa
+            //            Console.WriteLine(coat.wheels); // ovim primjerom vidim da Bicycle može postati parent klasa
+            //            Console.WriteLine(coat.Bheels); // Bicycle = child klasa --> (Vehicle)
+            //            coat.go();                      // Bicycle = parent klasa --> (Coat)
+            //        }
+            //
+            //    }
+            //
+            //    class Vehicle 
+            //    {
+            //        public int speed = 0;
+            //
+            //        public void go()
+            //        {
+            //            Console.WriteLine("This vehicle is moving!");
+            //        }
+            //    }
+            //
+            //        class Tar : Vehicle // Car is child class, Vehicale is parent class
+            //    {
+            //        public int wheels = 4;
+            //    }
+            //
+            //        class Bicycle : Vehicle // Car is child class, Vehicale is parent class
+            //    {
+            //        public int wheels = 2;
+            //
+            //    }
+            //
+            //    class Boat : Vehicle
+            //    {
+            //        public int wheels = 0;
+            //    }
+            //
+            //    class Coat : Bicycle // child klasa može postati i parent klasa
+            //    {                    // npr Bicycle je child klasa od Vehicle + također je parent klasa od Coat
+            //        public int Bheels = 3;
+            //    }
+
+
+            // Abstract classes \\
+
+            
 
         }
+
     }
+
 }
 
 
