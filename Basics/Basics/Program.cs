@@ -1065,12 +1065,107 @@ namespace Basics
 
             // Abstract classes \\
 
-            
+            //            Person person = new Person();
+            //            person.Name = "John";
+            //            person.Age = 30;
+            //            person.Introduce();
+            //
+            //
+            //        }
+            //
+            //    }
+            //
+            //    public class Person
+            //    {
+            //        // Fields
+            //        public string Name;
+            //        public int Age;
+            //
+            //        // Method
+            //        public void Introduce()
+            //        {
+            //            Console.WriteLine($"Hello, my name is {Name} and I am {Age} years old.");
+            //        }
+            //    }
+
+            // Abstract classes \\
+
+            //            Tar tar = new Tar();
+            //            Bicycle bicycle = new Bicycle();
+            //            Boat boat = new Boat();
+            //           // Vehicle vehicle = new Vehicle(); /* ovaj objekt ne mogu kreirati jer je Vehicle klasa abstraktna klasa */
+            //
+            //
+            //        }
+            //
+            //    }
+            //
+            //    abstract class Vehicle
+            //    {
+            //        public int speed = 0;
+            //
+            //        public void go()
+            //        {
+            //            Console.WriteLine("This vehicle is moving!");
+            //        }
+            //    }
+            //    class Tar : Vehicle
+            //    {
+            //        public int wheels = 4;
+            //        int maxSpeed = 500;
+            //    }
+            //    class Bicycle : Vehicle
+            //    {
+            //        public int wheels = 2;
+            //        int maxSpeed = 50;
+            //    }
+            //    class Boat : Vehicle
+            //    {
+            //        public int wheels = 0;
+            //        int maxSpeed = 100;
+            //    }
+
+
+            // Array of objects \\
+
+
+            //Tar[] garage = new Tar[3];
+            //
+            //Tar car1 = new Tar("Mustang");
+            //Tar car2 = new Tar("Corvette");
+            //Tar car3 = new Tar("Lambo");
+            //
+            //garage[0] = car1;
+            //garage[1] = car2;
+            //garage[2] = car3;
+
+
+            //            Tar[] garage = { new Tar("Mustang"), new Tar("Corvette"), new Tar("Lambo") }; // ovo je način za složiti array sa anonymous objektima
+            //
+            //
+            //            foreach (Tar car in garage)
+            //            {
+            //                Console.WriteLine(car.model);
+            //            }
+            //
+            //        }
+            //    }
+            //
+            //    class Tar
+            //    {
+            //        public string model;
+            //
+            //        public Tar(string model)
+            //        {
+            //            this.model = model;
+            //        }
+            //    }
+
+
+            // objects as arguments \\
 
         }
-
     }
-
 }
 
 
