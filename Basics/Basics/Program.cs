@@ -3,6 +3,8 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.Design;
 using System.Drawing;
 using System.Reflection;
+using System.Runtime.InteropServices;
+using System.Xml.Schema;
 
 namespace Basics
 {
@@ -1129,42 +1131,82 @@ namespace Basics
             // Array of objects \\
 
 
-            //Tar[] garage = new Tar[3];
-            //
-            //Tar car1 = new Tar("Mustang");
-            //Tar car2 = new Tar("Corvette");
-            //Tar car3 = new Tar("Lambo");
-            //
-            //garage[0] = car1;
-            //garage[1] = car2;
-            //garage[2] = car3;
-
-
-            //            Tar[] garage = { new Tar("Mustang"), new Tar("Corvette"), new Tar("Lambo") }; // ovo je način za složiti array sa anonymous objektima
+            //            Tar[] garage = new Tar[3];
+            //            
+            //            Tar car1 = new Tar("Mustang");
+            //            Tar car2 = new Tar("Corvette");
+            //            Tar car3 = new Tar("Lambo");
+            //            
+            //            garage[0] = car1;
+            //            garage[1] = car2;
+            //            garage[2] = car3;
             //
             //
-            //            foreach (Tar car in garage)
-            //            {
-            //                Console.WriteLine(car.model);
-            //            }
-            //
-            //        }
-            //    }
-            //
-            //    class Tar
-            //    {
-            //        public string model;
-            //
-            //        public Tar(string model)
-            //        {
-            //            this.model = model;
-            //        }
-            //    }
+            //            //            Tar[] garage = { new Tar("Mustang"), new Tar("Corvette"), new Tar("Lambo") }; // ovo je način za složiti array sa anonymous objektima
+            //            
+            //            
+            //                        foreach (Tar bluh in garage)
+            //                        {
+            //                            Console.WriteLine(bluh.model);
+            //                        }
+            //            
+            //                    }
+            //                }
+            //            
+            //                class Tar
+            //                {
+            //                    public string model;
+            //            
+            //                    public Tar(string model)
+            //                    {
+            //                        this.model = model;
+            //                    }
+            //                }
 
 
             // objects as arguments \\
 
+
+
+
+            Tar car1 = new Tar("Corvette", "red");
+
+            Tar ar = Copy(car1);
+
+            /* ChangeColor(car1, "silver"); */
+
+            Console.WriteLine(ar.color + " " + ar.model);
+
+            //  Console.WriteLine(car1.color + " " + car1.model);
+
+
         }
+        // /* */ to pass an object as an argument you have to type data type of the object ( Tar ), followed by the name of the parameter ( in this case its called car) --> ( name in this case doesn't matter, not sure if it matters in any other cases )
+        // /* */ and then when you invode the method ( ChangeColor ) you have to pass in the name of the object ( car1 )
+        public static void ChangeColor(Tar car, String color)
+        {
+            car.color = color;
+        }
+
+
+        public static Tar Copy(Tar ar)
+        {
+            return new Tar(ar.model, ar.color); // ovdje je dodan objekt kao argument na način da ar 
+        }
+
+    }
+    public class Tar
+    {
+
+        public String model;
+        public String color;
+
+        public Tar(string model, string color)
+        {
+            this.model = model;
+            this.color = color;
+        }
+
     }
 }
 
