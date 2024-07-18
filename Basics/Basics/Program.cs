@@ -1169,45 +1169,136 @@ namespace Basics
 
 
 
-            Tar car1 = new Tar("Corvette", "red");
+            //            Tar car1 = new Tar("Corvette", "red");
+            //
+            //            Tar ar = Copy(car1);
+            //
+            //            /* ChangeColor(car1, "silver"); */
+            //
+            //            Console.WriteLine(ar.color + " " + ar.model);
+            //
+            //            //  Console.WriteLine(car1.color + " " + car1.model);
+            //
+            //
+            //        }
+            //        // /* */ to pass an object as an argument you have to type data type of the object ( Tar ), followed by the name of the parameter ( in this case its called car) --> ( name in this case doesn't matter, not sure if it matters in any other cases )
+            //        // /* */ and then when you invode the method ( ChangeColor ) you have to pass in the name of the object ( car1 )
+            //        public static void ChangeColor(Tar car, String color)
+            //        {
+            //            car.color = color;
+            //        }
+            //
+            //
+            //        public static Tar Copy(Tar ar)
+            //        {
+            //            return new Tar(ar.model, ar.color); // ovdje je dodan objekt kao argument na način da ar 
+            //        }
+            //
+            //    }
+            //    public class Tar
+            //    {
+            //
+            //        public String model;
+            //        public String color;
+            //
+            //        public Tar(string model, string color)
+            //        {
+            //            this.model = model;
+            //            this.color = color;
+            //        }
+            //
+            //    }
 
-            Tar ar = Copy(car1);
-
-            /* ChangeColor(car1, "silver"); */
-
-            Console.WriteLine(ar.color + " " + ar.model);
-
-            //  Console.WriteLine(car1.color + " " + car1.model);
 
 
-        }
-        // /* */ to pass an object as an argument you have to type data type of the object ( Tar ), followed by the name of the parameter ( in this case its called car) --> ( name in this case doesn't matter, not sure if it matters in any other cases )
-        // /* */ and then when you invode the method ( ChangeColor ) you have to pass in the name of the object ( car1 )
-        public static void ChangeColor(Tar car, String color)
-        {
-            car.color = color;
-        }
+            // ToString method \\
 
 
-        public static Tar Copy(Tar ar)
-        {
-            return new Tar(ar.model, ar.color); // ovdje je dodan objekt kao argument na način da ar 
-        }
+            //            Tar car = new Tar("Chevy", "Corvette", 2022, "blue");
+            //
+            //            Console.WriteLine(car);
+            //
+            //        } 
+            //        
+            //
+            //    }
+            //
+            //    class  Tar
+            //    {
+            //        string make;
+            //        string model;
+            //        int year;
+            //        string color;
+            //
+            //        public Tar(String make, String model, int year, String color)
+            //        {
+            //            this.make = make;
+            //            this.model = model;
+            //            this.year = year;
+            //            this.color = color;
+            //        }
+            //        public override string ToString()
+            //        {
+            //            return "This is a " + make + " " + model;
+            //        }
+            //
+            //
+            //    }
 
-    }
-    public class Tar
-    {
+            // Polymorphism \\ --> To "have many forms"
+            //                     Objects can be identified by more than one type
+            //                     Example: Human can be a Son, a Doctor, a husband
 
-        public String model;
-        public String color;
+    //            Tar car = new Tar();
+    //            Bycicle bycicle = new Bycicle();
+    //            Boat boat = new Boat();
+    //
+    //            Vehicle[] vehicles = { car, bycicle, boat };
+    //
+    //            int[] zum = { 12, 5, 19 };
+    //
+    //            foreach (double a in zum) // on je sada odradio konvertanje iz int u double
+    //            {
+    //                Console.WriteLine("test");
+    //            }
+    //
+    //            foreach (Vehicle vehicle in vehicles)
+    //            {
+    //                vehicle.Go();
+    //            }
+    //
+    //        }
+    //    }
+    //    class Vehicle
+    //    {
+    //        public virtual void Go()
+    //        {
+    //        
+    //        }
+    //    }
+    //
+    //    class Tar : Vehicle
+    //    {
+    //        public override void Go()
+    //        {
+    //            Console.WriteLine("The tar is moving"); 
+    //        }
+    //    }
+    //    class Bycicle : Vehicle
+    //    {
+    //        public override void Go()
+    //        {
+    //            Console.WriteLine("The bycicle is moving");
+    //        }
+    //    }
+    //    class Boat : Vehicle
+    //    {
+    //        public override void Go()
+    //        {
+    //            Console.WriteLine("The boat is moving");
+    //        }
+    //    }
 
-        public Tar(string model, string color)
-        {
-            this.model = model;
-            this.color = color;
-        }
-
-    }
 }
 
 
