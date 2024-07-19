@@ -1249,57 +1249,193 @@ namespace Basics
             //                     Objects can be identified by more than one type
             //                     Example: Human can be a Son, a Doctor, a husband
 
-    //            Tar car = new Tar();
-    //            Bycicle bycicle = new Bycicle();
-    //            Boat boat = new Boat();
-    //
-    //            Vehicle[] vehicles = { car, bycicle, boat };
-    //
-    //            int[] zum = { 12, 5, 19 };
-    //
-    //            foreach (double a in zum) // on je sada odradio konvertanje iz int u double
-    //            {
-    //                Console.WriteLine("test");
-    //            }
-    //
-    //            foreach (Vehicle vehicle in vehicles)
-    //            {
-    //                vehicle.Go();
-    //            }
-    //
-    //        }
-    //    }
-    //    class Vehicle
-    //    {
-    //        public virtual void Go()
-    //        {
-    //        
-    //        }
-    //    }
-    //
-    //    class Tar : Vehicle
-    //    {
-    //        public override void Go()
-    //        {
-    //            Console.WriteLine("The tar is moving"); 
-    //        }
-    //    }
-    //    class Bycicle : Vehicle
-    //    {
-    //        public override void Go()
-    //        {
-    //            Console.WriteLine("The bycicle is moving");
-    //        }
-    //    }
-    //    class Boat : Vehicle
-    //    {
-    //        public override void Go()
-    //        {
-    //            Console.WriteLine("The boat is moving");
-    //        }
-    //    }
+            //            Tar car = new Tar();
+            //            Bycicle bycicle = new Bycicle();
+            //            Boat boat = new Boat();
+            //
+            //            Vehicle[] vehicles = { car, bycicle, boat };
+            //
+            //            int[] zum = { 12, 5, 19 };
+            //
+            //            foreach (double a in zum) // on je sada odradio konvertanje iz int u double
+            //            {
+            //                Console.WriteLine("test");
+            //            }
+            //
+            //            foreach (Vehicle vehicle in vehicles)
+            //            {
+            //                vehicle.Go();
+            //            }
+            //
+            //        }
+            //    }
+            //    class Vehicle
+            //    {
+            //        public virtual void Go()
+            //        {
+            //        
+            //        }
+            //    }
+            //
+            //    class Tar : Vehicle
+            //    {
+            //        public override void Go()
+            //        {
+            //            Console.WriteLine("The tar is moving"); 
+            //        }
+            //    }
+            //    class Bycicle : Vehicle
+            //    {
+            //        public override void Go()
+            //        {
+            //            Console.WriteLine("The bycicle is moving");
+            //        }
+            //    }
+            //    class Boat : Vehicle
+            //    {
+            //        public override void Go()
+            //        {
+            //            Console.WriteLine("The boat is moving");
+            //        }
+            //    }
+
+
+            //            // Interfaces \\ defines a "contract" that all the classes inheriting from should follow
+            //            //               An interface declares "what a class should have"
+            //            //               An inheriting class defines "how it should do it"
+            //            //               Benefit = security + multiple inheritance + "plug-and-play"
+            //
+            //
+            //
+            //
+            //            Rabbit rabbit = new Rabbit();
+            //            rabbit.Flee();
+            //
+            //            Hawk hawk = new Hawk();
+            //            hawk.Hunt();
+            //
+            //            Fish fish = new Fish();
+            //            fish.Flee();
+            //            fish.Hunt();
+            //
+            //        }
+            //    }
+            //
+            //
+            //    interface Iprey
+            //    {
+            //        public void Flee();
+            //    }
+            //    interface IPredator
+            //    {
+            //        public void Hunt();
+            //    }
+            //
+            //
+            //
+            //    class Rabbit : Iprey
+            //    {
+            //        public void Flee()
+            //        {
+            //            Console.WriteLine("The Rabbit runs aways");
+            //        }
+            //        
+            //    }
+            //    class Hawk : IPredator
+            //    {
+            //        public void Hunt()
+            //        {
+            //            Console.WriteLine("The Hawk is searching for food");
+            //        }
+            //
+            //
+            //    }
+            //    class Fish : Iprey, IPredator
+            //    {
+            //        public void Flee()
+            //        {
+            //            Console.WriteLine("Fish swims away");
+            //        }
+            //        public void Hunt()
+            //        {
+            //            Console.WriteLine("Fish is searching for smaller fish");
+            //        }
+            //    }
+
+            // Lists \\ data structure that represets a list of objects that can be access by index.
+            //          Similar to array, but can dynamically increase/decrease in size
+            //          using System.Collections.Generic;
+
+            //            List<string> food = new List<string>();
+            //
+            //            food.Add("pizza");
+            //            food.Add("hamburger");
+            //            food.Add("hotdog");
+            //            food.Add("fries");
+            //            food.Add("hotdog");
+            //
+            //            //Console.WriteLine(food[2]);
+            //
+            //            //food.Remove("hotdog");
+            //            //food.Insert(0, "sushi");
+            //            //Console.WriteLine(food.Count);
+            //            //Console.WriteLine(food.Index);
+            //            //Console.WriteLine(food.IndexOf("hotdog")); // Index se može promjeniti za određeni element nakon što se odradi "Sort" metoda
+            //            //Console.WriteLine(food.LastIndexOf("hotdog"));
+            //            //Console.WriteLine(food.Contains("fries"));
+            //            //food.Sort(); // sortira abecedno elemente u list-i
+            //            //food.Reverse(); // sortira elemente u listi obrnutno nego što su napisani npr ako je prvi element pizza, onda će biti zadnji elemnt, ako je hotdog elent u sredini on će ostati u sredini
+            //            //food.Clear(); // obriše sadržaj varijable
+            //            //String[] foodAray = food.ToArray(); // kreiralo je isti sadržaj kao u food varijabli samo što je --> foodArray varijabla Array, a --> food varijabla je list
+            //
+            //            //Console.WriteLine(food[2]);
+            //
+            //            // food[1] = "toast";
+            //
+            //
+            //            foreach (string item in food)
+            //            {
+            //                Console.WriteLine(item);
+            //            }
+            //
+            //        }
+            //    }
+
+            // List of objects \\ 
+
+            
+            List<Player> players = new List<Player>(); // lista objekata se radi na način da prilikom kreiranje objekta dodamo List<> npr --> List<Objekt> umjesto samo Objekt
+
+            Player player1 = new Player("Chad");
+            Player player2 = new Player("Mike");
+            Player player3 = new Player("Tom");
+
+            players.Add(player1); // iako se ovo može odraditi anonyimusly ne moram ranije definirati varijablu npr:
+            players.Add(player2); // players.Add(new Player("Mike"));
+            players.Add(player3);
+
+            foreach (Player player in players)
+            {
+                Console.WriteLine(player);
+            }
+
+
+        }
+
+    }
+
+    class Player
+    {
+        public String username;
+
+        public Player(String username)
+        {
+            this.username = username;
+        }
+        public override String ToString() 
+        {
+            return username;
+        }
+    }
 
 }
-
-
-
