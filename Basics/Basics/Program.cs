@@ -1403,39 +1403,78 @@ namespace Basics
 
             // List of objects \\ 
 
+
+            //            List<Player> players = new List<Player>(); // lista objekata se radi na način da prilikom kreiranje objekta dodamo List<> npr --> List<Objekt> umjesto samo Objekt
+            //
+            //            Player player1 = new Player("Chad");
+            //            Player player2 = new Player("Mike");
+            //            Player player3 = new Player("Tom");
+            //
+            //            players.Add(player1); // iako se ovo može odraditi anonyimusly ne moram ranije definirati varijablu npr:
+            //            players.Add(player2); // players.Add(new Player("Mike"));
+            //            players.Add(player3);
+            //
+            //            foreach (Player player in players)
+            //            {
+            //                Console.WriteLine(player);
+            //            }
+            //
+            //
+            //        }
+            //
+            //    }
+            //
+            //    class Player
+            //    {
+            //        public String username;
+            //
+            //        public Player(String username)
+            //        {
+            //            this.username = username;
+            //        }
+            //        public override String ToString() 
+            //        {
+            //            return username;
+            //        }
+            //    }
+
+            // Getters & setters \\ 
+
+
+            Tar tar = new Tar(5);
+
+            tar.Speed = 1000000;
+
             
-            List<Player> players = new List<Player>(); // lista objekata se radi na način da prilikom kreiranje objekta dodamo List<> npr --> List<Objekt> umjesto samo Objekt
 
-            Player player1 = new Player("Chad");
-            Player player2 = new Player("Mike");
-            Player player3 = new Player("Tom");
-
-            players.Add(player1); // iako se ovo može odraditi anonyimusly ne moram ranije definirati varijablu npr:
-            players.Add(player2); // players.Add(new Player("Mike"));
-            players.Add(player3);
-
-            foreach (Player player in players)
-            {
-                Console.WriteLine(player);
-            }
-
+            Console.WriteLine(tar.Speed);
 
         }
-
     }
-
-    class Player
+    class Tar
     {
-        public String username;
+        private int speed;
 
-        public Player(String username)
+        public Tar(int peed)
         {
-            this.username = username;
+            this.speed = peed;
         }
-        public override String ToString() 
+        public int Speed
         {
-            return username;
+            get { return speed; } // read 
+            set                   // write
+            { 
+                if (value > 500)
+                {
+                speed = 500;
+                }
+                else
+                {
+                  value = speed;
+                }
+            }
         }
+        
     }
-
 }
+
