@@ -1441,40 +1441,88 @@ namespace Basics
             // Getters & setters \\ 
 
 
-            Tar tar = new Tar(5);
+            //            Tar tar = new Tar(5);
+            //
+            //            tar.Speed = 1000000;
+            //
+            //            
+            //
+            //            Console.WriteLine(tar.Speed);
+            //
+            //        }
+            //    }
+            //    class Tar
+            //    {
+            //        private int speed;
+            //
+            //        public Tar(int peed)
+            //        {
+            //            this.speed = peed;
+            //        }
+            //        public int Speed
+            //        {
+            //            get { return speed; } // read 
+            //            set                   // write
+            //            { 
+            //                if (value > 500)
+            //                {
+            //                speed = 500;
+            //                }
+            //                else
+            //                {
+            //                  value = speed;
+            //                }
+            //            }
+            //        }
+            //        
+            //    }
 
-            tar.Speed = 1000000;
 
-            
+            // Auto-Implemented properties \\ = shortcut when no additional logic is required in the property
+            //                                  you do not have to define a field for a property,
+            //                                  you only have to write get; and/or set; inside the property
 
-            Console.WriteLine(tar.Speed);
+            //            Tar tar = new Tar("Audi");
+            //
+            //            Console.WriteLine(tar.Model);
+            //
+            //        }
+            //    }
+            //
+            //
+            // //    class Tar /* Kraće napisani ovaj kod se nalazi ispod ( KORISTI SE Auto-Implemented property) */
+            // //    {
+            // //
+            // //        String model;
+            // //
+            // //        public string Model
+            // //        {
+            // //            get { return model; }
+            // //            set { model = value; }
+            // //        }
+            // //
+            // //        public Tar(String model)
+            // //        {
+            // //
+            // //            this.Model = model;
+            // //
+            // //        }
+            // //
+            // //    }
+            //
+            //
+            //
+            //    class Tar
+            //    {
+            //        public string Model { get; set; } // here is still a model field but its hidden
+            //
+            //        public Tar(String model)
+            //        {
+            //
+            //            this.Model = model;
+            //
+            //        }
+            //
+            //    }
 
-        }
-    }
-    class Tar
-    {
-        private int speed;
-
-        public Tar(int peed)
-        {
-            this.speed = peed;
-        }
-        public int Speed
-        {
-            get { return speed; } // read 
-            set                   // write
-            { 
-                if (value > 500)
-                {
-                speed = 500;
-                }
-                else
-                {
-                  value = speed;
-                }
-            }
-        }
-        
-    }
-}
 
